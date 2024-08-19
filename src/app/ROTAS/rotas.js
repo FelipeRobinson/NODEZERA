@@ -7,7 +7,8 @@ module.exports = (aplicacao) => {
 
     aplicacao.get("/home", (req, res) => {
         console.log("A rota HOME foi acessada")
-        res.send("<h1>Você obteve o molho + casa...</h1>")
+        // res.send("<h1>Você obteve o molho + casa...</h1>")
+        res.render("home");
     });
 
     aplicacao.get("/contato", (req, res) => {
