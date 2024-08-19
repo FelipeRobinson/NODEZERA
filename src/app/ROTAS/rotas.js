@@ -6,13 +6,17 @@ module.exports = (aplicacao) => {
     });
 
     aplicacao.get("/home", (req, res) => {
-        console.log("A rota foi acessada")
+        console.log("A rota HOME foi acessada")
         res.send("<h1>Você obteve o molho + casa...</h1>")
     });
 
     aplicacao.get("/contato", (req, res) => {
-        console.log("A rota foi acessada")
+        console.log("A rota CONTATO foi acessada ")
         res.send("<h1>Você obteve o molho + contato...</h1>")
     });
 
+    aplicacao.get("/pqp", (req, res) => {
+        console.log("A rota PQP foi acessada")
+        res.send("<h1>EU NÃOP AGUENTO MAISSSSSSSSSSSSSSSSSSSSSSSSSSSSSS...</h1>")
+    });
 };
