@@ -1,6 +1,5 @@
 const aplicacao = require("./src/config/express");
-const porta = 3000;
 
-aplicacao.listen(porta, () => {
+aplicacao.listen(3000, () => {
     console.log("Servidor Ativo.");
 });
