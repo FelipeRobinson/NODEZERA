@@ -1,7 +1,14 @@
 module.exports = (aplicacao) => {
     // as rotas da aplicação
-    aplicacao.get("/", (req, res) => {
-        res.render('../views/ejs/listagemClientes', { clientes: resultados });
-        console.log("A rota foi acessada");
-    });
+    
+    aplicacao.use((req,res,next) => {
+        res.header("Acess-Control-Allow-Origin","*");
+        next();
+    })
+
+    const clientesController = require('../controllers/controllerClientes');
+    const OBJ_clieteController = new clientesController();
+
+    // rota para a LISTAGEM de CLIENTES
+    aplicacao.get("/", OBJ_clieteController.exibeClientes());
 };

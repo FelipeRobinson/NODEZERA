@@ -1,11 +1,11 @@
 const mysql = require("mysql2");
 
-const connection = mysql.createConnection((
-    host: 'regulus.cotuca.unicamp.br';
-    user: 'BD24464';
-    password: 'BD24464';
+const connection = mysql.createConnection({
+    host: 'regulus.cotuca.unicamp.br',
+    user: 'BD24464',
+    password: 'BD24464',
     database: 'BD24464'
-));
+});
 
 connection.connect(function(erro){
     if(erro)

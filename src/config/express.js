@@ -1,16 +1,21 @@
 const express = require("express");
+const aplicacao = express();
+const bodyParser = require("body-parser");
 
+const expressLayout = require("express-ejs-layouts")
+aplicacao.set("view engine","ejs")
+aplicacao.set("views","./views");
+aplicacao.use(expressLayout);
+
+aplicacao.use (
+    bodyParser.urlencoded({
+        extended: true,
+    })
+)
 
 //criando a aplicação
-const aplicacao = express();
 const rotas = require("../app/ROTAS/rotas");
 rotas(aplicacao);
-
-
-// indica o caminho para os ARQUIVOS
-aplicacao.use(express.static("files"));
-aplicacao.set("views","./views");
-aplicacao.set("view engine","ejs");
 
 
 module.exports = aplicacao;
