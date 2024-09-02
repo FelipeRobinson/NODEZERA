@@ -41,7 +41,10 @@ class CLIENTES {
     }
     
     /* DELETE */
-    apagaClientes() {
+    apagaClientes(ID) {
+        return new Promise ((resolve,reject) => {
+            var sql
+        })
     }
 }
 

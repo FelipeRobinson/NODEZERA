@@ -17,6 +17,10 @@ class controllerClientes {
                 .catch(erro => console.log(erro));
         }
     }
+
+    excluiCliente() {
+        
+    }
 }
 
 module.exports = controllerClientes;
